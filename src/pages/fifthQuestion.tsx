@@ -1,34 +1,42 @@
 import { useEffect } from "react";
 
 export function FifthQuestion() {
-  function findHighestFloor(andarSecreto = Math.floor(Math.random() * 100) + 1) {
-    let step = 14;
-    let currentFloor = step;
-    let attempts = 0;
+  function isBroken(floor: number) {
+    const highestSafeFloor = 67; // If the safe limit is 67
+    return floor > highestSafeFloor;
+}
 
-    while (currentFloor <= 100) {
-        attempts++;
-        if (currentFloor > andarSecreto) break;
-
-        step--;
-        currentFloor += step;
+  function findHighestSafeFloor(totalFloors = 100) {
+    const step = 10;
+    let egg1 = 10;
+    let drops = 0;
+    
+    while (egg1 <= totalFloors) {
+        drops++;
+        if (isBroken(egg1)) {
+            egg1 -= step;
+            break;
+        }
+        egg1 += step;
     }
-
-    const ultimoSeguro = currentFloor - step;
-    for (let i = ultimoSeguro + 1; i <= currentFloor; i++) {
-        attempts++;
-        if (i >= andarSecreto) return { andarSecreto, attempts };
+    
+    while (egg1 <= totalFloors) {
+        drops++;
+        if (isBroken(egg1)) {
+            return egg1 - 1; // return the last secure floor
+        }
+        egg1++;
     }
-
-    return { andarSecreto, attempts };
+    
+    return totalFloors;
 }
   
   useEffect(() => {
-    const result = findHighestFloor()
+    const result = findHighestSafeFloor()
     console.log(result);
   }, [])
 
   return (
-    <h1 className="text-green-500 text-lg font-semibold">Building Question</h1>
+    <h1 className="text-green-500 text-lg font-semibold">Question about the Building</h1>
   )
 }

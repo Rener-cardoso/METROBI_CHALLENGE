@@ -13,6 +13,6 @@ export function SecondQuestion() {
   }, [])
 
   return (
-    <h1 className="text-green-500 text-lg font-semibold">Async function with delay</h1>
+    <div className="text-green-500 text-lg font-semibold border h-screen flex items-center justify-center">Async function with delay</div>
   )
 }

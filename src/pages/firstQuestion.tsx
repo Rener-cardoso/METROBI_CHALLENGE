@@ -22,6 +22,6 @@ export function FirstQuestion() {
   }, [])
 
   return (
-    <h1 className="text-green-500 text-lg font-semibold">Find Duplicate Items function</h1>
+    <div className="text-green-500 text-lg font-semibold border h-screen flex items-center justify-center">Find Duplicate Items function</div>
   )
 }

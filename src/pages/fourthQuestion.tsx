@@ -2,24 +2,24 @@ import { useEffect } from "react";
 
 export function FourthQuestion() {
   function isValidBrackets(string: string) {
-    const stack = [];
+    const controlArray = [];
     const pairs: Record<string, string> = {
       ')': '(',
       '}': '{',
       ']': '['
     };
-  
+
     for (const char of string) {
       if (char === '(' || char === '{' || char === '[') {
-        stack.push(char);
+        controlArray.push(char);
       } else if (char in pairs) {
-        if (stack.pop() !== pairs[char]) {
+        if (controlArray.pop() !== pairs[char]) {
           return false;
         }
       }
     }
   
-    return stack.length === 0;
+    return controlArray.length === 0;
   }
 
   useEffect(() => {
@@ -28,6 +28,6 @@ export function FourthQuestion() {
   }, [])
 
   return (
-    <h1 className="text-green-500 text-lg font-semibold">isValidBrackets function</h1>
+    <div className="text-green-500 text-lg font-semibold border h-screen flex items-center justify-center">isValidBrackets function</div>
   )
 }
