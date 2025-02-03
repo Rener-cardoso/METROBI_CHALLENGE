@@ -3,3 +3,7 @@
 1. Clone o repositório
 2. Rode o comando `npm install` para instalar as dependências
 3. Rode o comando `npm run dev` para executar a aplicação
+
+# Instruções
+
+Todas as questões estão divididas em páginas dentro de ./src/pages

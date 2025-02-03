@@ -36,6 +36,6 @@ export function SeventhQuestion() {
   }, [])
 
   return (
-    <h1 className="text-green-500 text-lg font-semibold">MaxValueFunction</h1>
+    <div className="text-green-500 text-lg font-semibold border h-screen flex items-center justify-center">MaxValueFunction</div>
   )
 }

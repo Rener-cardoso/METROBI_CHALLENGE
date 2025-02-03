@@ -37,6 +37,6 @@ export function FifthQuestion() {
   }, [])
 
   return (
-    <h1 className="text-green-500 text-lg font-semibold">Question about the Building</h1>
+    <div className="text-green-500 text-lg font-semibold border h-screen flex items-center justify-center">Question about the Building</div>
   )
 }
