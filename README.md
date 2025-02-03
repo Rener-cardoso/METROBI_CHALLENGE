@@ -1,9 +1,25 @@
-# Como executar a aplicação
+## Getting Started
 
-1. Clone o repositório
-2. Rode o comando `npm install` para instalar as dependências
-3. Rode o comando `npm run dev` para executar a aplicação
+To run the application locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+  git clone git@github.com:Rener-cardoso/METROBI_CHALLENGE.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
+```
 
 # Instruções
 
-Todas as questões estão divididas em páginas dentro de ./src/pages
+All questions are divided into pages within ./src/pages
