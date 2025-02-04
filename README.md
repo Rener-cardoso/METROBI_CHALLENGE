@@ -23,3 +23,4 @@ npm run dev
 # Instruções
 
 All questions are divided into pages within ./src/pages
+You can see the return of the functions in the console of the browser.
